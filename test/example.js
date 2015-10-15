@@ -7,6 +7,7 @@ contract('TomTest',function(test1) {
             console.log("2 tom address: "+tom.address+" (deploy: "+TomTest.deployed_address+")");
             return tom.value.call();
         }).then(function(value) {
+            done();
             console.log("3 tom address: "+tom.address+" (deploy: "+TomTest.deployed_address+")");
             assert.equal(value.toNumber(),50);
         });
